@@ -4,9 +4,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ChatControl extends JavaPlugin {
 
+    private static ChatControl instance;
+
+    public boolean isChatLocked = false;
+
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        instance = this;
+    }
 
+    public static ChatControl getInstance() {
+        return instance;
     }
 }
