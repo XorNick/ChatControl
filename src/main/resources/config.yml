@@ -1,3 +1,9 @@
 # Configuration file for ChatControl written by XorNick, show some love <3
 
+
+# Aesthetics
 CHAT_LOCKED_ERROR: '&7(&c!&7) &7&lYou currently cannot speak in chat.'
+
+
+# Feature toggling, etc
+blockChatUntilPlayerMoved: true
