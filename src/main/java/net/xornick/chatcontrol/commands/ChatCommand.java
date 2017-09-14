@@ -19,12 +19,17 @@ public class ChatCommand implements CommandExecutor {
             return true;
         }
         if (args.length != 1) {
-            player.sendMessage(ChatColor.RED + "/chat [clear, toggle, reload]");
+            player.sendMessage(ChatColor.RED + "/chat [clear, toggle]");
             return true;
         }
         if (args.length == 1) {
             if (args[0].equalsIgnoreCase("toggle")) {
                 ChatUtil.toggleChat(player);
+                return true;
+            }
+            if (args[0].equalsIgnoreCase("clear")) {
+                ChatUtil.clearChat(player);
+                return true;
             }
         }
         return false;

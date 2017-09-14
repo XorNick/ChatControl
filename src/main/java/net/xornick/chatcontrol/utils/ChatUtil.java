@@ -13,9 +13,19 @@ public class ChatUtil {
             plugin.isChatLocked = true;
 
             for (Player onlinePlayers : plugin.getServer().getOnlinePlayers()) {
-                onlinePlayers.sendMessage(ChatColor.YELLOW + "Server chat has been disabled by " + ChatColor.GREEN + player.getName());
+                onlinePlayers.sendMessage(ChatColor.GREEN + "Server chat has been disabled by " + ChatColor.YELLOW + player.getName());
             }
             player.sendMessage(ChatColor.GREEN + "Server chat toggled off!");
         }
+    }
+
+    public static void clearChat(Player player) {
+        for (Player onlinePlayers : plugin.getServer().getOnlinePlayers()) {
+            for (int i = 0; i < 75; i++) {
+                onlinePlayers.sendMessage(" ");
+            }
+            onlinePlayers.sendMessage(ChatColor.GREEN + "Server chat cleared by " + ChatColor.YELLOW + player.getName());
+        }
+        player.sendMessage(ChatColor.GREEN + "Server chat has been cleared!");
     }
 }

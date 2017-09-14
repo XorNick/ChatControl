@@ -22,6 +22,5 @@ public class ChatListener implements Listener {
             event.setCancelled(true);
             return;
         }
-
     }
 }
