@@ -22,5 +22,10 @@ public class ChatListener implements Listener {
             event.setCancelled(true);
             return;
         }
+        if (plugin.blockInteractionUntilPlayerMove && plugin.moved.contains(player.getUniqueId())) {
+            player.sendMessage(ChatColor.RED + "You cannot chat until you have moved!");
+            event.setCancelled(true);
+            return;
+        }
     }
 }

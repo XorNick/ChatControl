@@ -6,4 +6,4 @@ CHAT_LOCKED_ERROR: '&7(&c!&7) &7&lYou currently cannot speak in chat.'
 
 
 # Feature toggling, etc
-blockChatUntilPlayerMove: true
+blockInteractionUntilPlayerMove: true
