@@ -1,3 +1,7 @@
 name: ChatControl
 version: ${project.version}
 main: net.xornick.chatcontrol.ChatControl
+commands:
+  chatcontrol:
+    description: Primary plugin command
+    aliases: [chat]
